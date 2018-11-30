@@ -11,3 +11,6 @@ post '/jugar' do
     session["mensaje"] = bg.crea_tablero
     erb(:juego)
 end
+
+post '/disparar' do
+end

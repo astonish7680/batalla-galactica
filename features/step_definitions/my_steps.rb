@@ -17,3 +17,16 @@ Given(/^que abri el juego$/) do
   Then(/^la nave debe ocupar una sola coordenada$/) do
     "La matriz tiene una posición ocupadas"
   end
+
+  Given(/^un juego preparado$/) do
+    visit('/juego')
+  end
+  
+  When(/^realizo un disparo$/) do
+    click_button("Disparar")
+  end
+  
+  Then(/^la coordenada debe tener el formato "([^"]*)"$/) do |arg1|
+    
+  end
+  
