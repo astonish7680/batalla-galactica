@@ -1,0 +1,21 @@
+Scenario: Las coordenadas deben de estar dentro del rango [0,1] para cada eje
+    Given un juego preparado
+    When realizo un disparo
+    Then cada coordenada debe estar dentro del rango "[0,1]"
+
+
+Scenario: Si las coordenadas del disparo coinciden con las de la nave, debo saber si el resultado
+    Given un juego preparado
+    When la nave tiene coordenadas "[1,1,1]"
+    And realizo un disparo
+    And el disparo tiene coordenadas "[1,1,1]"
+    Then debo ver "La nave ha sido destruida"
+
+
+
+Scenario: Si las coordenadas del disparo  no coinciden con las de la nave, debo saber el resultado
+    Given un juego preparado
+    When la nave tiene coordenadas "[1,1,1]"
+    And realizo un disparo
+    And el disparo tiene coordenadas "[1,1,1]"
+    Then debo ver "Fallaste :P"
