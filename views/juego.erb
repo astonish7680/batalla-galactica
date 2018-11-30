@@ -6,12 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
-    <h1> <%= session["mensaje"] %></h1>
-    <form action="/disparar" method="post">
-        <input type="submit" value="Disparar">
-    </form>
 
-    <h1>la coordenada debe tener el formato "1,1,1"</h1>
+
+<body style="text-align: center">
+    <h2>(-o-)----->   ?  (-o-)</h2>
+    
+    <form action="/disparar" method="POST">
+    <h1> <%= session["mensaje"] %></h1>
+       
+    Coordenada 1 <select name="c1" id="c1" >
+        <option value="0">0</option>
+        <option value="1">1</option>
+    </select>
+    <br/>
+    Coordenada 2 <select name="c2" id="c1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+    </select>
+    <br/>
+    Coordenada 3 <select name="c3" id="c1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="Disparar">
+    </form>
+   
+    <h1>la coordenada debe tener el formato "1,1,1"</h1>   
+    <br>
+    <h2>(-o-)   (-o-)   (-o-)   (-o-)   (-o-)  (-o-)</h2>
 </body>
 </html>
