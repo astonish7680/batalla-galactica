@@ -1,12 +1,13 @@
 require 'sinatra'
 require './config'
+require './lib/batalla-galactica.rb'
 
 get '/' do
     erb(:index)
 end
 
-post '/juego' do
+post '/jugar' do
     bg = BatallaGalactica.new
-    bg.crea_tablero
+    session["mensaje"] = bg.crea_tablero
     erb(:juego)
 end

@@ -15,5 +15,5 @@ Given(/^que abri el juego$/) do
   end
   
   Then(/^la nave debe ocupar una sola coordenada$/) do
-    "La matriz tiene una posición ocupadasss"
+    "La matriz tiene una posición ocupadas"
   end
