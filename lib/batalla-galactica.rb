@@ -21,6 +21,8 @@ class BatallaGalactica
     end
 
     def punteria coord_misil, coord_nave
+        puts coord_nave
+        puts coord_misil
         if coord_misil == coord_nave
             "GANASTE!"
         else
