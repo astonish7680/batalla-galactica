@@ -24,5 +24,10 @@ class BatallaGalactica
         "La nave ha sido colocada en 1,1,1"
     end
 
+    def disparar c1,c2,c3
+        #@posicion_nave = rand(8)
+        c1.to_s+c2.to_s+c3.to_s
+    end
+
 
 end

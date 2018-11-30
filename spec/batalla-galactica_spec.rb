@@ -12,4 +12,11 @@ describe BatallaGalactica do
         resutado = bg.crea_nave
         expect(resutado).to eq ("La nave ha sido colocada en 1,1,1")
     end
+
+    it "Dispara" do
+        bg = BatallaGalactica.new
+        bg.crea_nave
+        resutado = bg.disparar 1,1,1
+        expect(resutado).to eq ("111")
+    end    
 end

@@ -15,4 +15,12 @@ end
 
 post '/disparar' do
     erb(:juego)
+    bg = BatallaGalactica.new
+    session["mensaje"] = bg.crea_tablero
+    session["mensaje_nave"] = bg.crea_nave
+   
+
+    session["coordenadas_disparo"] = bg.disparar params["c1"], params["c2"],params["c3"]
+    erb(:juego)
+    
 end
