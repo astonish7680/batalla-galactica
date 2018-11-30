@@ -6,11 +6,12 @@ get '/' do
     erb(:index)
 end
 
-post '/jugar' do
+post '/juego' do
     bg = BatallaGalactica.new
     session["mensaje"] = bg.crea_tablero
     erb(:juego)
 end
 
 post '/disparar' do
+    erb(:juego)
 end

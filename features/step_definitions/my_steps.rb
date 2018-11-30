@@ -19,14 +19,14 @@ Given(/^que abri el juego$/) do
   end
 
   Given(/^un juego preparado$/) do
-    visit('/juego')
+    visit('/')
+    click_button("Comenzar")
   end
   
   When(/^realizo un disparo$/) do
     click_button("Disparar")
   end
   
-  Then(/^la coordenada debe tener el formato "([^"]*)"$/) do |arg1|
-    
+  Then(/^la coordenada debe tener el formato "([^"]*)"$/) do |text|
+    expect(page.body).to match /#{text}/m
   end
-  
