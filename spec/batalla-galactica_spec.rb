@@ -5,6 +5,11 @@ describe BatallaGalactica do
         bg = BatallaGalactica.new
         resutado = bg.crea_tablero
         expect(resutado).to eq ("La matriz de 2x2x2 ha sido creada")
-    end 
-
+    end
+    
+    it "Crea nave" do
+        bg = BatallaGalactica.new
+        resutado = bg.crea_nave
+        expect(resutado).to eq ("La nave ha sido colocada en 1,1,1")
+    end
 end
