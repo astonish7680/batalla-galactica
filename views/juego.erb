@@ -19,12 +19,12 @@
         <option value="1">1</option>
     </select>
     <br/>
-    Coordenada 2 <select name="c2" id="c1">
+    Coordenada 2 <select name="c2" id="c2">
             <option value="0">0</option>
             <option value="1">1</option>
     </select>
     <br/>
-    Coordenada 3 <select name="c3" id="c1">
+    Coordenada 3 <select name="c3" id="c3">
             <option value="0">0</option>
             <option value="1">1</option>
     </select>
@@ -37,7 +37,12 @@
 
 
     <h1>Historico: <%= session["n_disparos"] %></h1>
-    <h1>1,1,1: false</h1>
+
+    <h1>
+        <% session["lista_disparos"].each do |disparo| %>
+        <%= disparo %> <br />
+        <% end %>
+    </h1>
 
 </body>
 </html>

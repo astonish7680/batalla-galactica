@@ -39,3 +39,9 @@ Given(/^que abri el juego$/) do
     expect(page.body).to match /#{text}/m
   end
   
+  When(/^realizo un disparo "([^"]*)"$/) do |arg1|
+    click_button("c1")
+    click_button("c2")
+    click_button("c3")
+  end
+  

@@ -13,7 +13,3 @@ Scenario: Al realizar un disparo en 1,1,1 debo de ver mi disparo en el historico
     Given un juego preparado
     When realizo un disparo
     Then El historico contiene "Historico: 1"
-    Then El historico contiene "1,1,1: false"
-
-
-
