@@ -7,7 +7,7 @@ Feature:
 Scenario:La matriz debe ser de 2x2x2
     Given que abri el juego
     When click en "Comenzar"
-    Then el sistema debe de crear una matriz de 2x2x2
+    Then debo ver "La matriz de 2x2x2 ha sido creada"
 
 Scenario:El sistema debe ubicar una nave en la matriz
     Given que abri el juego
