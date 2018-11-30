@@ -21,6 +21,14 @@ class BatallaGalactica
     end
 
     def punteria coord_misil, coord_nave
-        coord_misil == coord_nave
+        if coord_misil == coord_nave
+            "GANASTE!"
+        else
+            "MISIL FALLIDO. SIGUE INTENTANDO!"
+        end
+    end
+
+    def get_posicion_nave
+        @posicion_nave
     end
 end
