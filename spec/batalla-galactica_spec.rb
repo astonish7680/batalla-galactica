@@ -1,4 +1,4 @@
-require './lib/batalla-galactica.rb'
+require './lib/batalla-galactica'
 
 describe BatallaGalactica do
     it "Inicia Juego" do
