@@ -21,9 +21,9 @@ class BatallaGalactica
     end
 
     def punteria coord_misil, coord_nave
-        puts coord_nave
-        puts coord_misil
-        if coord_misil == coord_nave
+        #puts coord_nave.to_i
+        #puts coord_misil.to_i
+        if coord_misil.to_i == coord_nave.to_i
             "GANASTE!"
         else
             "MISIL FALLIDO. SIGUE INTENTANDO!"
