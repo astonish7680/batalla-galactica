@@ -18,7 +18,18 @@ describe BatallaGalactica do
     it "Dispara" do
         bg = BatallaGalactica.new
         bg.crea_nave
-        resutado = bg.disparar 1,0,1
-        expect(resutado).to match /[01]+/m
-    end    
+        resultado = bg.disparar 1,0,1
+        expect(resultado).to match /[01]+/m
+    end
+
+    it "Contador de Disparos" do
+        bg = BatallaGalactica.new
+        bg.crea_nave
+        bg.disparar 1,0,1
+        bg.disparar 1,1,1
+        resultado = bg.get_n_disparos
+        expect(resultado).to eq 2
+    end
+    
+    
 end

@@ -11,6 +11,7 @@ post '/jugar' do
     session["bg"] = BatallaGalactica.new
     session["mensaje"] = session["bg"].crea_tablero
     session["mensaje_nave"] = session["bg"].crea_nave
+    session["n_disparos"] = session["bg"].get_n_disparos
     erb(:juego)
 end
 
@@ -19,6 +20,6 @@ post '/disparar' do
     bg = session["bg"]
     session["mensaje"] = bg.disparar params["c1"], params["c2"],params["c3"]
     session["mensaje_nave"] = bg.punteria session["mensaje"], bg.get_posicion_nave
+    session["n_disparos"] = bg.get_n_disparos
     erb(:juego)
-    
 end

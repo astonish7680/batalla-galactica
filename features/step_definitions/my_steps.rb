@@ -30,3 +30,12 @@ Given(/^que abri el juego$/) do
   Then(/^la coordenada debe tener el formato "([^"]*)"$/) do |text|
     expect(page.body).to match /#{text}/m
   end
+
+  Then(/^El historico contiene "([^"]*)"$/) do |text|
+    expect(page.body).to match /#{text}/m
+  end
+  
+  Then(/^El historico debe estar vacio "([^"]*)"$/) do |text|
+    expect(page.body).to match /#{text}/m
+  end
+  

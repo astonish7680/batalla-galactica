@@ -2,6 +2,7 @@ class BatallaGalactica
     
     def initialize
         @posicion_nave = 0
+        @n_disparos = 0
     end
 
     def crea_tablero
@@ -13,6 +14,7 @@ class BatallaGalactica
     end
 
     def disparar c1,c2,c3
+        @n_disparos += 1
         misil = (c1.to_s+c2.to_s+c3.to_s)
     end
 
@@ -33,4 +35,9 @@ class BatallaGalactica
     def get_posicion_nave
         @posicion_nave
     end
+
+    def get_n_disparos
+        @n_disparos
+    end
+
 end
